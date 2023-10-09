@@ -64,16 +64,16 @@ def register():
 @app.route('/protected', methods=['GET'])
 @jwt_required(optional=True)
 def protected_route():
-    current_user_id = get_jwt_identity()
-    if current_user_id:
-        return f'Protected route accessed by user with ID {current_user_id}'
-    elif 'access_token' in request.cookies:
-        return f'Protected route accessed by user with token in cookies'
+    access_token = session.get('access_token')
+    username = session.get('username')
+    if access_token and username:
+        return f'Protected route accessed by user with ID {username}'
     else:
         return 'Unauthorized', 401
-    
 
 @app.route('/logout', methods=['GET'])
 def logout():
+    print(session)
     session.clear()
+    print(session)
     return redirect(url_for('index'))

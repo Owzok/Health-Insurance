@@ -9,17 +9,16 @@
 <body>
     <div class="box">
         <div class="title-box">
-            <h1>healthguard</h1>
+            <h1>VehicleGuard</h1>
             <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-            <p>HealthGuard Insurance provides comprehensive health coverage to safeguard your well-being and peace of mind.</p>
+            <p>Insurance offers complete coverage to protect your vehicle and provide you with peace of mind on the road.</p>
         </div>
         <div class="form-box">
         <form method="POST" action="{{ url_for('login') }}">
-            <input type="text" name="username" id="username" placeholder="Email address or phone number" required>
+            <input type="text" name="username" id="username" placeholder="Username or Email Address" required>
             <input type="password" name="password" placeholder="Password" id="password" required>
             <button type="submit">Log In</button>
         </form>
-        <hr>
         <div class="create-btn">
             <a href="{{ url_for('register') }}">Create New Account</a>
         </div>

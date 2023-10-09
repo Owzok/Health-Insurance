@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Register</title>
+    <title>Login</title>
 </head>
 <body>
-    <div class="container">
-        <form method="POST" action="{{ url_for('register') }}">
-            <h2>Register</h2>
-            {% if username_taken %}
-                <p style="color: red;">Username already taken. Please choose another.</p>
-            {% endif %}
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="nrotelf">Phone</label>
-                <input type="text" name="nrotelf" id="nrotelf" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
-            </div>
+    <div class="box">
+        <div class="title-box">
+            <h1>VehicleGuard</h1>
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+            <p>Insurance offers complete coverage to protect your vehicle and provide you with peace of mind on the road.</p>
+        </div>
+        <div class="form-box">
+        <form method="POST" action="{{ url_for('login') }}">
+            <input type="text" name="username" id="username" placeholder="Username or Email Address" required>
+            <input type="text" name="nrotelf" placeholder="+51 9## ### ###" id="nrotelf" required>
+            <input type="password" name="password" placeholder="Password" id="password" required>
             <button type="submit">Register</button>
         </form>
+        <div class="create-btn">
+            <a href="{{ url_for('index') }}">I already've an account</a>
+        </div>
+        </div>
     </div>
- </body>
- </html>
+</body>
+</html>
