@@ -7,11 +7,13 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(60), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
+    nrotelf = db.Column(db.String(12), unique=True, nullable=False)
     #token = db.Column(db.String(128), unique=True)
 
-    def __init__(self, username, password):
+    def __init__(self, username, password, nrotelf):
         self.username = username
         self.password = self.hash_password(password)
+        self.nrotelf = nrotelf
         #self.token = None
 
     def hash_password(self, password):

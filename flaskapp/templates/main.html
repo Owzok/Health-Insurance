@@ -12,10 +12,13 @@
             <h1>HealthGuard</h1>
         </div>
         <div class="navbar-right">
-            <h3>{{username}}</h3>
-            <div class="user-photo">
-                <img src="{{ url_for('static', filename='default.jpg') }}" alt="User Photo">
+            <div class="user-info">
+                <h3>{{ username }}</h3>
+                <div class="user-photo">
+                    <img src="{{ url_for('static', filename='default.jpg') }}" alt="User Photo">
+                </div>
             </div>
+            <a href="{{ url_for('logout') }}" class="logout-button">Log out</a>
         </div>
     </div>
 </body>
