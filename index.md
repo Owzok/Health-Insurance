@@ -8,7 +8,7 @@ El proyecto se centra en el análisis del dataset [Health Insurance Cross Sell P
 
 El dataset original contiene las siguientes variables:
 
-| Columna              | Descripción                                                   |
+| Variable              | Descripción                                                   |
 |----------------------|---------------------------------------------------------------|
 | Gender               | Género del cliente                                            |
 | Age                  | Edad del cliente                                              |
@@ -21,7 +21,19 @@ El dataset original contiene las siguientes variables:
 | Response             | 1 : Cliente interesado, 0 : Cliente no interesado              |
 
 
-Se agregará data mock de cada cliente incluyendo: Full name (o iniciales para anonimización), Date of birth (o age), Address, Phone numbers, Email address, y Social security number (o national identification number).
+Sobre la data real, se agregará data mock que puede ser considerada sensible sobre cada cliente incluyendo:
+
+| Variable       | Descripción                                      |
+|---------------|--------------------------------------------------|
+| First name    | Nombre de la persona                             |
+| Last name     | Apellido de la persona                           |
+| Phone_Number  | Celular de la persona                            |
+| CCNumber      | Número de tarjeta de crédito                     |
+| Address       | Dirección de la persona                          |
+| Country       | Abreviatura del país donde vive                  |
+| Email         | Correo electrónico de la persona                 |
+
+Más adelante, se planea agregar un VIN (Vehicle Identification Number) para cada vehículo y el SSN (Social Security Number) para cada persona.
 
 La estructura de la base de datos se detalla en las siguientes tablas:
 
