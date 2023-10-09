@@ -161,6 +161,23 @@ Proporciona capacitación y concienciación sobre seguridad de datos a todos los
 - Asegurarse de que los empleados estén al tanto de las políticas de uso aceptable de la tecnología y de las consecuencias de su incumplimiento.
 - Proporciona formación especializada a los equipos de TI y seguridad de datos para mantenerlos al tanto de las últimas amenazas y técnicas de mitigación.
 
+## Plan de respuesta ante incidentes de seguridad
+
+En caso de una fuga o pérdida de datos, se plantea el siguiente plan básico de acción:
+
+1. **Confirmar la fuga o pérdida de los datos y evaluar la magnitud del evento:**
+    - De esta manera, determinamos cuáles y cuántos datos han sido afectados, si se trata de datos privados de los usuarios o datos internos de la aseguradora, y cuándo ocurrió la fuga para entender la gravedad del incidente.
+2. **Aislamiento y Mitigación del daño sobre las áreas afectadas:**
+    - Al aislar las áreas afectadas evitamos que el daño pueda convertirse en colateral y afectar otras áreas o procesos del servicio web. A su vez, se toma medidas para mitigar cualquier daño adicional o propagación de la fuga, mediante desconexiones de sistemas, cambios de contraseñas y cambios en las restricciones de acceso.
+3. **Notificación a las partes afectadas:**
+    - Comunicar a las partes interesadas de la aseguradora y, de ser necesario, también a los clientes afectados de manera transparente y oportuna, informando que el servicio web podría encontrarse caído por un tiempo hasta que se contenga y arregle el daño.
+4. **Realizar una investigación interna sobre los Logs del sistema:**
+    - De esta manera, mediante análisis forense, se puede identificar las causas de la fuga, quiénes estuvieron involucrados, la debilidad en la zona vulnerada y, más adelante, se puede plantear cómo se pudo haber prevenido.
+5. **Reparación y Mejoras:**
+    - Realizar las correcciones necesarias para evitar futuras fugas de datos, ya sea que haya ocurrido de manera intencional o no intencional, y se pueda mejorar la seguridad del sistema.
+6. **Monitoreo Continuo:**
+    - Si bien se espera que esa área esté arreglada y protegida de cualquier daño, es importante que después de un evento similar se mantenga un monitoreo más intencional sobre el área afectada, así se pueda detectar de manera más proactiva cualquier actividad que se considere fuera de lo común.
+
 ## Recomendaciones de Protección de Datos Futura
 
 - VPN, WAF, Tokenización de datos sensibles.
