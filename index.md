@@ -42,6 +42,7 @@ CREATE TABLE `users` (
   `id` int PRIMARY KEY,
   `first_name` varchar(255),
   `last_name` varchar(255),
+    password varchar(256),
   `phone` varchar(255),
   `email` varchar(255),
   `gender` varchar(255),
