@@ -7,8 +7,18 @@ El proyecto se centra en el análisis del dataset [Health Insurance Cross Sell P
 ## Sobre la base de datos y las transformaciones necesarias
 
 El dataset original contiene las siguientes variables:
+| Columna              | Descripción                                                   |
+|----------------------|---------------------------------------------------------------|
+| Gender               | Género del cliente                                            |
+| Age                  | Edad del cliente                                              |
+| Previously_Insured   | 1 : Cliente tiene seguro de vehículo, 0 : Cliente no tiene seguro de vehículo |
+| Vehicle_Age          | Tiempo del vehículo                                           |
+| Vehicle_Damage       | 1 : Cliente dañó su vehículo en el pasado. 0 : Cliente no dañó su vehículo en el pasado |
+| Annual_Premium       | Monto que necesita pagar el cliente como premium en el año   |
+| Policy_Sales_Channel | Código anónimo del canal de comunicación con el cliente (Correo, persona, teléfono, etc) |
+| Vintage              | Número de días que el cliente ha estado asociado con la compañía |
+| Response             | 1 : Cliente interesado, 0 : Cliente no interesado              |
 
-- Gender, Age, Driving_License, Previously_Insured, Vehicle_Age, Vehicle_Damage, Annual_Premium, Policy_Sales_Channel, Vintage, y Response.
 
 Se agregará data mock de cada cliente incluyendo: Full name (o iniciales para anonimización), Date of birth (o age), Address, Phone numbers, Email address, y Social security number (o national identification number).
 
