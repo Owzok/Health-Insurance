@@ -108,7 +108,6 @@ Los KPIs definidos son:
 ### Gestión de Accesos:
 
 - RBAC, ABAC.
-- MFA.
 - OTP.
 
 ### Logs y Auditoría:
@@ -181,12 +180,14 @@ En caso de una fuga o pérdida de datos, se plantea el siguiente plan básico de
 ## Recomendaciones de Protección de Datos Futura
 
 - VPN, WAF, Tokenización de datos sensibles.
+- MFA
 - (Pseudo) Anonimización de datos, IDS/IPS, Pruebas de penetración periódicas.
 - Gestión mejorada de claves y certificados.
 
-## Lecciones Aprendidas y Retrospectiva
 
-a
+
+
+
 
 
 
