@@ -106,19 +106,19 @@ Los KPIs definidos son:
 
 
 **1. Tasa de conversión a Seguros de Autos:** 
-   - Fórmula: \[\dfrac{\text{Número de clientes interesados}}{\text{Número de clientes contactados}} \times 100\]
+   - Fórmula: $\dfrac{\text{Número de clientes interesados}}{\text{Número de clientes contactados}} \times 100$
 
 **2. Tasa de renovación de Seguros de Autos:** 
-   - Fórmula: \[\dfrac{\text{Número de clientes que contaban previamente con seguro de auto}}{\text{Total de clientes del año pasado}} \times 100\]
+   - Fórmula: $\dfrac{\text{Número de clientes que contaban previamente con seguro de auto}}{\text{Total de clientes del año pasado}} \times 100$
 
 **3. Prima anual promedio:** 
-   - Fórmula: \[\dfrac{\text{Suma anual de primas totales}}{\text{Total de clientes}}\]
+   - Fórmula: $\dfrac{\text{Suma anual de primas totales}}{\text{Total de clientes}}$
 
 **4. Antigüedad promedio de los clientes:** 
-   - Fórmula: \[\dfrac{\text{Suma total de días de antigüedad de clientes}}{\text{Total de clientes}}\]
+   - Fórmula: $\dfrac{\text{Suma total de días de antigüedad de clientes}}{\text{Total de clientes}}$
 
 **5. Tasa de cotizaciones completadas:** 
-   - Fórmula: \[\dfrac{\text{Número de cotizaciones completadas}}{\text{Número de cotizaciones iniciadas}} \times 100\]
+   - Fórmula: $\dfrac{\text{Número de cotizaciones completadas}}{\text{Número de cotizaciones iniciadas}} \times 100$
 
 
 
@@ -176,12 +176,8 @@ Desarrolla políticas claras y sólidas que establezcan las reglas y normativas 
 - Requiere autenticación de dos factores (2FA) para el acceso a sistemas y aplicaciones que almacenan datos sensibles.
 - Establece reglas de acceso basadas en roles para garantizar que solo las personas autorizadas tengan acceso a datos específicos.
 - Requiere contraseñas fuertes y periódicamente cambiantes.
-- Prohíbe el uso compartido de contraseñas y la escritura de contraseñas en papel o medios no seguros.
 - Exige el cifrado de datos sensibles tanto en reposo como en tránsito.
 - Define algoritmos y estándares de cifrado a utilizar.
-- Establece la frecuencia de copias de seguridad y procedimientos de recuperación de datos en caso de fallos o incidentes.
-- Asegura que las copias de seguridad se almacenan en ubicaciones seguras.
-- Regula el acceso de proveedores externos y contratistas a los sistemas y datos de la organización.
 - Exige acuerdos de confidencialidad y seguridad con terceros que manejen datos sensibles.
 
 ### Procedimientos y estándares
