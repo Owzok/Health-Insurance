@@ -13,7 +13,7 @@
         </div>
         <div class="navbar-right">
             <div class="user-info">
-                <h3>{{ username }}</h3>
+                <h3 id="username">{{ username }}</h3>
                 <div class="user-photo">
                     <img src="{{ url_for('static', filename='default.jpg') }}" alt="User Photo">
                 </div>
@@ -21,5 +21,29 @@
             <a href="{{ url_for('logout') }}" class="logout-button">Log out</a>
         </div>
     </div>
+    <div class="overlay"></div>
+    <div id="userPanel" class="user-panel">
+        <button class="close" id="closeButton">&times;</button>
+        <form id="editForm">
+            <h2>Edit Profile</h2>
+            <p>This is the only data we have from you. Feel free to ask for the deletion of it or modify it as you want.</p>
+            <div>
+                <label for="editUsername">New Username:</label>
+                <input type="text" id="editUsername" name="editUsername" value="{{ username }}">
+            </div>
+            <div>
+                <label for="editPassword">New Password:</label>
+                <input type="password" id="editPassword" name="editPassword">
+            </div>
+            <p id="password-strength"></p>
+            <div>
+                <label for="editEmail">New Email:</label>
+                <input type="email" id="editEmail" name="editEmail" value="{{ email }}">
+            </div>
+            <button type="submit">Save Changes</button>
+            <p></p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

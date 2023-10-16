@@ -14,16 +14,65 @@
             <p>Insurance offers complete coverage to protect your vehicle and provide you with peace of mind on the road.</p>
         </div>
         <div class="form-box">
-        <form method="POST" action="{{ url_for('login') }}">
+        <form method="POST" action="{{ url_for('register') }}">
             <input type="text" name="username" id="username" placeholder="Username or Email Address" required>
             <input type="text" name="nrotelf" placeholder="+51 9## ### ###" id="nrotelf" required>
-            <input type="password" name="password" placeholder="Password" id="password" required>
-            <button type="submit">Register</button>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <div id="password-strength">
+                <ul>
+                    <li id="length">At least 16 characters</li>
+                    <li id="uppercase">At least one uppercase letter</li>
+                    <li id="lowercase">At least one lowercase letter</li>
+                    <li id="digit">At least one digit</li>
+                    <li id="character">Includes at least one special character</li>
+                </ul> 
+            </div>
+            <div class="overlay"></div>
+            <div id="accept-tnc">
+                <label for="accept-tnc">Please accept our <span id="terms-link">Terms & Conditions</span></label>
+                <p></p>
+            </div>                  
+            <button type="submit" id="login-button" disabled>Register</button>
         </form>
         <div class="create-btn">
             <a href="{{ url_for('index') }}">I already've an account</a>
         </div>
         </div>
     </div>
+    <div id="termsPanel" class="user-panel">
+        <button class="close" id="closeButton">&times;</button>
+        <h2>Terms and Conditions</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel scelerisque mauris, in elementum mi. Fusce hendrerit diam non nunc auctor, et condimentum nisl rhoncus. Duis et risus id nulla pharetra congue. Aliquam in metus fringilla, facilisis tortor ac, tincidunt orci. Nulla facilisi.
+        </p>    
+        <label for="accept-tnc">I accept the terms and conditions</label>
+        <input type="checkbox" name="accept-tnc" id="tickbox">
+    </div>
+    <script src="{{ url_for('static', filename='password.js') }}"></script>
+    <script src="{{url_for('static', filename='togglepanel.js')}}"></script>
 </body>
 </html>

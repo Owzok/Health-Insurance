@@ -3,6 +3,9 @@ body {
     margin: 0;
     background: #f0f2f5;
     font-family: Arial, sans-serif;
+    background-image: url("./car\ shape.png");
+    background-repeat: no-repeat;
+    background-position: 900px 330px;
 }
 .box {
     display: flex;
@@ -13,6 +16,8 @@ body {
 }
 .title-box {
     width: 500px;
+    color: #166fe5;
+    letter-spacing: 8px;
 }
 
 .title-box h1{
@@ -92,4 +97,102 @@ body {
 }
 .form-box .create-btn a:hover {
     background: #42b72a;
+}
+
+#password-strength ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#password-strength li {
+    color: red; /* Start with red color for bullet points */
+}
+
+#password-strength .green {
+    color: green; /* Change to green when conditions are met */
+}
+
+#password {
+    border: 2px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#login-button {
+    background: #166fe5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#accept-tnc {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#accept-tnc input[type="checkbox"] {
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+}
+
+#accept-tnc label {
+    font-size: 16px; 
+    display: inline;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* Start with zero opacity */
+    z-index: 1;
+    pointer-events: none; /* Initially non-clickable */
+    transition: background 3s, pointer-events 0.5s 3s; /* Add transitions */
+}
+
+.overlay.active {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    pointer-events: auto; /* Allow interactions */
+}
+
+#terms-link{
+    color: #166fe5;
+    cursor: pointer;
+}
+
+.user-panel {
+    width: 40%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    opacity: 0;
+    padding: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s, opacity 0.5s;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Update to translate for perfect centering */
+    overflow-y: auto;
+    background-color: white;
+}
+.user-panel.open {
+    opacity: 1;
 }

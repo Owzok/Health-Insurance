@@ -24,3 +24,14 @@ class User(db.Model):
     
     def create_token(self):
         return create_access_token(identity=self.id)
+    
+    def edit_user(self, username, password, nrotelf):
+        self.username = username
+        self.password = password
+        self.nrotelf = nrotelf
+
+class FailedLoginAttempt(db.Model):
+    __tablename__ = 'failed_login_attempts'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), nullable=False)
+    timestamp = db.Column(db.DateTime, nullable=False)
