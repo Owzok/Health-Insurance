@@ -23,61 +23,78 @@ El dataset original contiene las siguientes variables:
 
 Sobre la data real, se agregará data mock que puede ser considerada sensible sobre cada cliente incluyendo:
 
-| Variable       | Descripción                                      |
+| Variable      | Descripción                                      |
 |---------------|--------------------------------------------------|
-| First name    | Nombre de la persona                             |
-| Last name     | Apellido de la persona                           |
-| Phone_Number  | Celular de la persona                            |
-| CCNumber      | Número de tarjeta de crédito                     |
-| Address       | Dirección de la persona                          |
-| Country       | Abreviatura del país donde vive                  |
-| Email         | Correo electrónico de la persona                 |
+| id            | Identificador único para el usuario              |
+| name          | Nombre de la persona                             |
+| surname       | Apellido de la persona                           |
+| password      | Contraseña del usuario                           |
+| SSN           | Número de tarjeta de crédito                     |
+| email         | Correo electrónico de la persona                 |
+| blocked       | Indicador de si el usuario está bloqueado        |
+| user_id       | Identificador del usuario (referencia a `users`) |
+| vehicle_id    | Identificador único para el vehículo             |
+| brand         | Marca del vehículo                               |
+| model         | Modelo del vehículo                              |
+| year          | Año del vehículo                                 |
+| car_vin       | Número de identificación del vehículo (VIN)      |
+| use_place     | Lugar de uso del vehículo                        |
+| insurance_id  | Identificador único para el seguro               |
+| username      | Nombre de usuario para intentos de login        |
+| timestamp     | Marca de tiempo del intento de login fallido    |
 
-Más adelante, se planea agregar un VIN (Vehicle Identification Number) para cada vehículo y el SSN (Social Security Number) para cada persona.
+
+
 
 La estructura de la base de datos se detalla en las siguientes tablas:
 
 ```sql
-CREATE TABLE `users` (
-  `id` int PRIMARY KEY,
-  `first_name` varchar(255),
-  `last_name` varchar(255),
-   `password` varchar(256),
-  `phone` varchar(255),
-  `email` varchar(255),
-  `gender` varchar(255),
-  `age` int,
-  `address` varchar(255),
-  `country` varchar(255),
-  `ccnumber` varchar(255)
+CREATE TABLE users(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(100) NOT NULL,
+    surname varchar(100) NOT NULL,
+    password varchar(100) NOT NULL,
+    SSN varchar(100) UNIQUE NOT NULL,
+    email varchar(100) UNIQUE NOT NULL,
+    blocked bool NOT NULL,
+    PRIMARY KEY(id)
 );
 
-CREATE TABLE `vehicle_info` (
-  `id` int PRIMARY KEY,
-  `user_id` int,
-  `vehicle_age` varchar(255),
-  `vehicle_damage` varchar(255)
+CREATE TABLE vehicles(
+    user_id int UNIQUE NOT NULL,
+    vehicle_id varchar(100) UNIQUE NOT NULL,
+    brand varchar(20) NOT NULL,
+    model varchar(30) NOT NULL,
+    year int NOT NULL,
+    car_vin varchar(100) UNIQUE NOT NULL,
+    use_place varchar(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    PRIMARY KEY(vehicle_id)
 );
 
-CREATE TABLE `insurance_info` (
-  `id` int PRIMARY KEY,
-  `user_id` int,
-  `driving_license` int,
-  `previously_insured` int,
-  `annual_premium` float,
-  `policy_sales_channel` float,
-  `vintage` int,
-  `response` int
+CREATE TABLE insurance(
+    user_id int UNIQUE NOT NULL,
+    insurance_id varchar(100) UNIQUE NOT NULL,
+    previously_insured bool NOT NULL,
+    vintage int,
+    response bool NOT NULL, 
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    PRIMARY KEY(insurance_id)
 );
 
-ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `insurance_info` (`user_id`);
+CREATE TABLE failed_login_attempts(
+    id int NOT NULL AUTO_INCREMENT,
+    username varchar(100) NOT NULL,
+    timestamp timestamp NOT NULL,
+    PRIMARY KEY(id)
+);
 
-ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `vehicle_info` (`user_id`);
+
 ```
 
 ### Diagrama E-R
 
-![Diagrama E-R](anexos/try2.png)
+![Diagrama E-R](anexos/BD3.png)
 
 
 ## Requerimientos de Negocio
