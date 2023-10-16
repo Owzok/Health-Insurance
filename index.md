@@ -1,8 +1,8 @@
-# Proyecto Ética y Seguridad de los Datos: Health Insurance Cross Sell Prediction
+# Proyecto Ética y Seguridad de los Datos: Vehicle Guard
 
 ## Contexto e Introducción al Proyecto
 
-El proyecto se centra en el análisis del dataset [Health Insurance Cross Sell Prediction](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction) que contiene 381,000 filas, con el objetivo de optimizar la estrategia de canales de ventas, segmentar eficientemente a los clientes, mejorar la rentabilidad de pólizas/promociones y predecir la retención de clientes.
+El proyecto se centra en el análisis del dataset [Health Insurance Cross Sell Prediction](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction) que contiene 381,000 filas, con el objetivo de mejorar la rentabilidad de pólizas/promociones y predecir la retención de clientes.
 
 ## Sobre la base de datos y las transformaciones necesarias
 
@@ -84,10 +84,41 @@ ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `vehicle_info` (`user_id`)
 
 Los KPIs definidos son:
 
-- Optimización en la Estrategia de Canales de Ventas.
-- Segmentación eficiente de clientes.
-- Mejorar la rentabilidad de “Pólizas/Promociones”.
-- Predicción de Retención de Clientes.
+
+
+
+
+**1. Tasa de conversión a Seguros de Autos:** 
+   - Fórmula: \[\dfrac{\text{Número de clientes interesados}}{\text{Número de clientes contactados}} \times 100\]
+
+**2. Tasa de renovación de Seguros de Autos:** 
+   - Fórmula: \[\dfrac{\text{Número de clientes que contaban previamente con seguro de auto}}{\text{Total de clientes del año pasado}} \times 100\]
+
+**3. Prima anual promedio:** 
+   - Fórmula: \[\dfrac{\text{Suma anual de primas totales}}{\text{Total de clientes}}\]
+
+**4. Antigüedad promedio de los clientes:** 
+   - Fórmula: \[\dfrac{\text{Suma total de días de antigüedad de clientes}}{\text{Total de clientes}}\]
+
+**5. Tasa de cotizaciones completadas:** 
+   - Fórmula: \[\dfrac{\text{Número de cotizaciones completadas}}{\text{Número de cotizaciones iniciadas}} \times 100\]
+
+
+
+Los OKRs son:
+
+
+
+**Objetivo: Aumentar la captación de leads a través del formulario de cotización**
+
+- **Resultado Clave 1:** Incrementar el número de cotizaciones completadas en el formulario en un 20% para el final del Q2.
+- **Resultado Clave 2:** Mejorar la tasa de retención de clientes que regresan para realizar una nueva cotización en un 15% para el final del Q3.
+
+**Objetivo: Mejorar la eficiencia y usabilidad del formulario de cotización**
+
+- **Resultado Clave 1:** Reducir el tiempo promedio de completado del formulario en un 25% a través de optimizaciones de UX/UI para el final del Q1.
+- **Resultado Clave 2:** Obtener una puntuación de satisfacción del cliente de 90% o más respecto a la facilidad de uso del formulario para el final del Q2.
+
 
 ## Requerimientos de Seguridad
 
@@ -104,10 +135,12 @@ Los KPIs definidos son:
 - HTTPS (si es posible en el tiempo dado).
 - Verificación de emisor y receptor.
 - Grupos de seguridad en AWS como firewall.
+- CORS
 
 ### Gestión de Accesos:
 
 - RBAC, ABAC.
+- MFA
 - OTP.
 
 ### Logs y Auditoría:
@@ -183,9 +216,6 @@ En caso de una fuga o pérdida de datos, se plantea el siguiente plan básico de
 - MFA
 - (Pseudo) Anonimización de datos, IDS/IPS, Pruebas de penetración periódicas.
 - Gestión mejorada de claves y certificados.
-
-
-
 
 
 
