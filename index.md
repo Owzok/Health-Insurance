@@ -106,19 +106,29 @@ Los KPIs definidos son:
 
 
 **1. Tasa de conversión a Seguros de Autos:** 
-   - Fórmula: $\dfrac{\text{Número de clientes interesados}}{\text{Número de clientes contactados}} \times 100$
+   - Fórmula:
+
+     $\dfrac{\text{Número de clientes interesados}}{\text{Número de clientes contactados}} \times 100$
 
 **2. Tasa de renovación de Seguros de Autos:** 
-   - Fórmula: $\dfrac{\text{Número de clientes que contaban previamente con seguro de auto}}{\text{Total de clientes del año pasado}} \times 100$
+   - Fórmula:
+
+     $\dfrac{\text{Número de clientes que contaban previamente con seguro de auto}}{\text{Total de clientes del año pasado}} \times 100$
 
 **3. Prima anual promedio:** 
-   - Fórmula: $\dfrac{\text{Suma anual de primas totales}}{\text{Total de clientes}}$
+   - Fórmula:
+
+     $\dfrac{\text{Suma anual de primas totales}}{\text{Total de clientes}}$
 
 **4. Antigüedad promedio de los clientes:** 
-   - Fórmula: $\dfrac{\text{Suma total de días de antigüedad de clientes}}{\text{Total de clientes}}$
+   - Fórmula:
+
+     $\dfrac{\text{Suma total de días de antigüedad de clientes}}{\text{Total de clientes}}$
 
 **5. Tasa de cotizaciones completadas:** 
-   - Fórmula: $\dfrac{\text{Número de cotizaciones completadas}}{\text{Número de cotizaciones iniciadas}} \times 100$
+   - Fórmula:
+
+     $\dfrac{\text{Número de cotizaciones completadas}}{\text{Número de cotizaciones iniciadas}} \times 100$
 
 
 
