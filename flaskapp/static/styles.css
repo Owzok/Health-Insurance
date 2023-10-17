@@ -196,3 +196,11 @@ body {
 .user-panel.open {
     opacity: 1;
 }
+
+ol li{
+    font-weight: bold;
+}
+
+ul li{
+    font-weight: normal;
+}

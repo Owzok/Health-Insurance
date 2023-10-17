@@ -9,7 +9,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-left">
-            <h1>HealthGuard</h1>
+            <h1>Vehicle Guard</h1>
         </div>
         <div class="navbar-right">
             <div class="user-info">
@@ -20,6 +20,9 @@
             </div>
             <a href="{{ url_for('logout') }}" class="logout-button">Log out</a>
         </div>
+    </div>
+    <div class="quote-button-container">
+        <button class="quote-button">Quote Vehicle</button>
     </div>
     <div class="overlay"></div>
     <div id="userPanel" class="user-panel">
@@ -43,6 +46,30 @@
             <button type="submit">Save Changes</button>
             <p></p>
         </form>
+    </div>
+    <div class="quote-cards">
+        <!-- Example vehicle cards -->
+        <div class="quote-card">
+            <h2>Vehicle 1</h2>
+            <p>Model: Model 1</p>
+            <p>Value: $10,000</p>
+            <p>Expires: 01/01/2024</p>
+        </div>
+        <div class="quote-card">
+            <h2>Vehicle 2</h2>
+            <p>Model: Model 2</p>
+            <p>Value: $15,000</p>
+            <p>Expires: 02/15/2024</p>
+        </div>
+
+        {% for vehicle in vehicles %}
+        <div class="quote-card">
+            <h2> {{vehicle.vehicle_id}}</h2>
+            <p>Model: {{vehicle.model}}</p>
+            <p>Year: {{vehicle.year}}</p>
+            <p>Brand: {{vehicle.brand}}</p>
+        </div>
+        {% endfor %}
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

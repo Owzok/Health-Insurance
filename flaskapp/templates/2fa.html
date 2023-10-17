@@ -14,14 +14,11 @@
             <p>Insurance offers complete coverage to protect your vehicle and provide you with peace of mind on the road.</p>
         </div>
         <div class="form-box">
+            <p>Check your mail.</p>
         <form method="POST" action="{{ url_for('login') }}">
-            <input type="text" name="email" id="email" placeholder="Email Address" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="text" name="code" id="code" placeholder="code" required>
             <button type="submit" id="login-button">Log In</button>
         </form>
-        <div class="create-btn">
-            <a href="{{ url_for('register') }}">Create New Account</a>
-        </div>
         </div>
     </div>
 </body>
