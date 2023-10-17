@@ -227,6 +227,6 @@ A futuro, nos gustaría terminar de implementar mejores reglas de acceso basadas
 
 A pesar de nuestra intención de reforzar la seguridad con VPN y WAF, no logramos implementar estas medidas debido a limitaciones de recursos (p.ej. en AWS con el WAF) y complejidades técnicas en el caso del VPN. Si bien estas carencias nos podrían dejar expuestos como servicio, quisieramos tratar de implementar el WAF e investigar una especie de simulación del VPN. 
 
-Por último, también buscaríamos una mejor gestión e implementación de políticas de contraseñas periódicamente cambiantes, y de gestión de certificados para nuestro gestor de Base de Datos (MySQL). Como también pruebas de penetración periódicas para evaluar nuestra seguridad.
+Por último, también buscaríamos una mejor gestión e implementación de políticas de contraseñas periódicamente cambiantes, y de gestión de certificados para nuestro gestor de Base de Datos (MySQL). Como también pruebas de penetración periódicas para evaluar nuestra seguridad. A su vez, un script de copia de seguridad de datos que se ejecute periódicamente para almacenar los avances.
 
 &copy; 2023 Proyecto DS3031
