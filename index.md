@@ -196,8 +196,6 @@ Crea procedimientos detallados para la recopilación, almacenamiento, transmisi�
 - Creación y gestión de credenciales de usuario, junto con su autenticación en sistemas y aplicaciones.
 - Creación, cambio y gestión de contraseñas de usuario teniendo en cuenta la prohibición de compartir contraseñas.
 - Configuración y mantenimiento de la infraestructura de cifrado.
-- Realización de copias de seguridad regulares y restauración de datos en caso de pérdida o corrupción.
-- Reglamento General de Protección de Datos (GDPR) de la Unión Europea: El GDPR es una regulación de la UE que establece estándares para la protección de datos personales.
 - AES (Advanced Encryption Standard): AES es uno de los estándares de encriptación más ampliamente utilizados en todo el mundo. Estamos implementado AES-256 para encriptar la data.
 - RSA (Rivest-Shamir-Adleman): RSA es un estándar de encriptación asimétrica que se utiliza para la encriptación de datos y la autenticación. Mientras que usamos RSA-256 para encriptar y desencriptar la llave del AES.
 
