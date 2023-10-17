@@ -156,7 +156,7 @@ Los OKRs son:
 
 ### Gestión de Accesos:
 
-- RBAC, ABAC.
+- RBAC.
 - MFA
 - OTP.
 
@@ -174,7 +174,6 @@ Se detallan las políticas, procedimientos y estándares, y la concienciación y
 Desarrolla políticas claras y sólidas que establezcan las reglas y normativas para el acceso, uso y manejo de los datos.
 
 - Requiere autenticación de dos factores (2FA) para el acceso a sistemas y aplicaciones que almacenan datos sensibles.
-- Establece reglas de acceso basadas en roles para garantizar que solo las personas autorizadas tengan acceso a datos específicos.
 - Requiere contraseñas fuertes y periódicamente cambiantes.
 - Exige el cifrado de datos sensibles tanto en reposo como en tránsito.
 - Define algoritmos y estándares de cifrado a utilizar.
@@ -189,9 +188,8 @@ Crea procedimientos detallados para la recopilación, almacenamiento, transmisi�
 - Configuración y mantenimiento de la infraestructura de cifrado.
 - Realización de copias de seguridad regulares y restauración de datos en caso de pérdida o corrupción.
 - Reglamento General de Protección de Datos (GDPR) de la Unión Europea: El GDPR es una regulación de la UE que establece estándares para la protección de datos personales.
-- AES (Advanced Encryption Standard): AES es uno de los estándares de encriptación más ampliamente utilizados en todo el mundo.
-- RSA (Rivest-Shamir-Adleman): RSA es un estándar de encriptación asimétrica que se utiliza para la encriptación de datos y la autenticación.
-- El conjunto de estándares PKCS (Public Key Cryptography Standards)
+- AES (Advanced Encryption Standard): AES es uno de los estándares de encriptación más ampliamente utilizados en todo el mundo. Estamos implementado AES-256 para encriptar la data.
+- RSA (Rivest-Shamir-Adleman): RSA es un estándar de encriptación asimétrica que se utiliza para la encriptación de datos y la autenticación. Mientras que usamos RSA-256 para encriptar y desencriptar la llave del AES.
 
 ### Concientización y formación del equipo
 
@@ -225,13 +223,10 @@ En caso de una fuga o pérdida de datos, se plantea el siguiente plan básico de
 
 ## Recomendaciones de Protección de Datos Futura
 
-- VPN, WAF, Tokenización de datos sensibles.
-- MFA
-- (Pseudo) Anonimización de datos, IDS/IPS, Pruebas de penetración periódicas.
-- Gestión mejorada de claves y certificados.
+A futuro, nos gustaría terminar de implementar mejores reglas de acceso basadas en roles para garantizar que solo las personas autorizadas tengan acceso a los datos específicos que requieran. Dado que, hasta el momento, solo tenemos dos roles muy básicos para un administrador y un analista de datos de los vehículos y su interés por el seguro vehicular.
 
+A pesar de nuestra intención de reforzar la seguridad con VPN y WAF, no logramos implementar estas medidas debido a limitaciones de recursos (p.ej. en AWS con el WAF) y complejidades técnicas en el caso del VPN. Si bien estas carencias nos podrían dejar expuestos como servicio, quisieramos tratar de implementar el WAF e investigar una especie de simulación del VPN. 
 
-
-
+Por último, también buscaríamos una mejor gestión e implementación de políticas de contraseñas periódicamente cambiantes, y de gestión de certificados para nuestro gestor de Base de Datos (MySQL). Como también pruebas de penetración periódicas para evaluar nuestra seguridad.
 
 &copy; 2023 Proyecto DS3031
