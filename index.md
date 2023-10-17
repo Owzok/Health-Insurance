@@ -191,7 +191,7 @@ Desarrolla políticas claras y sólidas que establezcan las reglas y normativas 
 
 ### Procedimientos y estándares
 
-Crea procedimientos detallados para la recopilación, almacenamiento, transmisión y eliminación segura de datos e implementa estándares de seguridad de datos reconocidos, como ISO 27001, para garantizar buenas prácticas.
+Crea procedimientos detallados para la recopilación, almacenamiento, transmisión y eliminación segura de datos e implementa estándares de seguridad de datos reconocidos.
 
 - Creación y gestión de credenciales de usuario, junto con su autenticación en sistemas y aplicaciones.
 - Creación, cambio y gestión de contraseñas de usuario teniendo en cuenta la prohibición de compartir contraseñas.
